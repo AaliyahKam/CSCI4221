@@ -1,0 +1,108 @@
+body {
+    background: #61adf9; 
+    font-family: "Courier New", monospace; /* Changed font for military look */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-size: larger;
+}
+
+#weather-container {
+    background: rgba(0, 0, 0, 0.7); /* Darker background for military look */
+    color: #f0f0f0; /* Light text color for contrast */
+    max-width: 500px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+}
+
+h2, label, p {
+    color: #f0f0f0; /* Light text color */
+    margin: 8px 0;
+    font-weight: bold; /* Bolder text for military look */
+}
+
+input {
+    width: calc(100% - 16px);
+    padding: 8px;
+    box-sizing: border-box;
+    border-radius: 5px; /* Sharper corners for military look */
+    border: 1px solid #ccc; /* Subtle border color */
+    margin-top: 20px;
+}
+
+button {
+    background: #4c4c4c; /* Darker button color */
+    color: #f0f0f0; /* Light text color */
+    padding: 10px;
+    border: none;
+    border-radius: 5px; /* Sharper corners */
+    cursor: pointer;
+    margin-top: 20px;
+    width: 100px;
+    font-size: 15px;
+}
+
+button:hover {
+    background: #6c6c6c; /* Slightly lighter on hover */
+}
+
+#temp-div p {
+    font-size: 60px;
+    margin-top: -5px;
+}
+
+#weather-info {
+    font-size: 20px;
+}
+
+#weather-icon {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 10px; 
+    margin-bottom: 0;
+    display: none;
+}
+
+#hourly-forecast {
+    margin-top: 50px;
+    overflow-x: auto;
+    white-space: nowrap;
+    display: flex;
+    justify-content: space-between;
+}
+
+.hourly-item {
+    flex: 0 0 auto;
+    width: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 10px;
+    color: #f0f0f0; /* Light text color */
+}
+
+.hourly-item img {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 5px;
+}
+
+#hourly-heading {
+    color: #f0f0f0; /* Light text color */
+}
+
+.clear-animation, .rain-animation, .snow-animation, .default-animation {
+    font-size: 40px; /* Large icon size for visibility */
+    animation: fadeIn 1s ease-in-out; /* Fade-in effect */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}

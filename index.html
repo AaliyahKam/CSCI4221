@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marine Weather App</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="weather-container">
+        <h2>Marine Weather App</h2> <!-- Changed the title to reflect the marine theme -->
+        <input type="text" id="zipcode" placeholder="Enter zipcode">
+        <input type="date" id="start-date" placeholder="Start Date">
+        <input type="date" id="end-date" placeholder="End Date">
+        <button onclick="getWeather()">Search</button>
+
+        <div id="weather-animations"></div> <!-- New div for weather animations -->
+
+        <img id="weather-icon" alt="Weather Icon">
+
+        <div id="temp-div"></div>
+
+        <div id="weather-info"></div>
+
+        <div id="hourly-forecast"></div>
+
+        <div id="historical-weather-info"></div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
