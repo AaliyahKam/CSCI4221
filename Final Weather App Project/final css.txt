@@ -1,0 +1,245 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 10px;
+  background: #f1f1f1;
+}
+
+/* Header/Blog Title */
+.header {
+  padding: 30px;
+  text-align: center;
+  background: rgb(3, 0, 0);
+  color: white;
+}
+
+.header h1 {
+  font-size: 50px;
+}
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #00296b;
+}
+
+/* Style the topnav links and the dropdown button */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+
+/* Change color on hover */
+.topnav a:hover, .dropdown:hover .dropbtn {
+  background-color: #e0fbfc;
+  text-decoration: underline;
+  color: #00296b;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 4px 1px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #feeb8a;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Create two unequal columns that float next to each other */
+
+/* Left column */
+.leftcolumn {
+  float: left;
+  width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  background-color: #f1f1f1;
+  padding-left: 20px;
+}
+
+/* Fake image */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#weatherData {
+  margin-top: 20px;
+}
+
+/* table */
+#weatherTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  display: none; /* Hide the table initially */
+}
+
+#weatherTable th, #weatherTable td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#weatherTable th {
+  background-color: #03045e;
+  color: white;
+  text-align: left;
+}
+
+
+
+/* WEATHER (AIR QUALITY) */
+#weather-container {
+  /* background: #023e8a; */
+  background-color: #023e8a; /* For browsers that do not support gradients */
+  background-image: linear-gradient(to bottom right, #023e8a, #48cae4);
+  max-width: auto;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+}
+
+h2, label, p {
+  color: #fff;
+  margin: 8px 0;
+}
+
+input {
+  width: calc(100% - 16px);
+  padding: 8px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  border: 1px solid white;
+  margin-top: 20px;
+}
+
+button {
+  background: #03045e;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 20px;
+  width: 100px;
+  font-size: 15px;
+  transition: all 0.5s; /* add transition */
+  display: inline-block;
+}
+
+/* button animation */
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19); /* add shadows to a button */
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #0f0101;
+  color: white;
+  margin-top: 20px;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {
+      width: 100%;
+      padding: 0;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .topnav a, .dropbtn {
+      float: none;
+      width: 100%;
+  }
+}
